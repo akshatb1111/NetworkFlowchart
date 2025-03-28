@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESS Pvt. Ltd.</title>
+</head>
+<body>
+  <h1>...</h1>
+
+  <!-- Image that will resize based on window dimensions -->
+  <img id="FlowChart" src="FlowChart.jpg" alt="Responsive Image">
+
+  <script>
+    function updateImageSize() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      document.getElementById('dimensions').innerText = `Width: ${width}px, Height: ${height}px`;
+
+      // Adjust image size to fit the window
+      const image = document.getElementById('responsiveImage');
+      image.width = width * 0.9; // 90% of window width
+      image.height = height * 0.9; // 90% of window height
+    }
+
+    // Update on load and resize
+    window.onload = updateImageSize;
+    window.onresize = updateImageSize;
+  </script>
+</body>
+</html>
